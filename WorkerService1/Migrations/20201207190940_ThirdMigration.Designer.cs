@@ -10,8 +10,8 @@ using WorkerService1.DbContextInit;
 namespace WorkerService1.Migrations
 {
     [DbContext(typeof(DataAccessContext))]
-    [Migration("20201203203714_First")]
-    partial class First
+    [Migration("20201207190940_ThirdMigration")]
+    partial class ThirdMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,9 +28,6 @@ namespace WorkerService1.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<DateTime>("DateTime")
-                        .HasColumnType("datetime2");
-
                     b.Property<bool>("DoorOpen")
                         .HasColumnType("bit");
 
@@ -45,6 +42,12 @@ namespace WorkerService1.Migrations
 
                     b.Property<float>("Power")
                         .HasColumnType("real");
+
+                    b.Property<DateTime>("ReceivedDateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("SentDateTime")
+                        .HasColumnType("datetime2");
 
                     b.Property<float>("Temperature")
                         .HasColumnType("real");

@@ -12,7 +12,8 @@ namespace WorkerService1.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Required]
         public int Id { get; set; }
-        public DateTime DateTime { get; set; }
+        public DateTime SentDateTime { get; set; }
+        public DateTime ReceivedDateTime { get; set; }
         public int MicrocontrollerID { get; set; }
         public float Temperature { get; set; }
         public float Humidity { get; set; }

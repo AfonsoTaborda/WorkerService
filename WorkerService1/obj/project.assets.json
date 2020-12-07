@@ -6715,19 +6715,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\liviu\\.nuget\\packages\\": {}
+    "C:\\Users\\afons\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\liviu\\source\\repos\\WorkerService1\\WorkerService1\\WorkerService1.csproj",
+      "projectUniqueName": "C:\\Users\\afons\\Source\\Repos\\WorkerService\\WorkerService1\\WorkerService1.csproj",
       "projectName": "WorkerService1",
-      "projectPath": "C:\\Users\\liviu\\source\\repos\\WorkerService1\\WorkerService1\\WorkerService1.csproj",
-      "packagesPath": "C:\\Users\\liviu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\liviu\\source\\repos\\WorkerService1\\WorkerService1\\obj\\",
+      "projectPath": "C:\\Users\\afons\\Source\\Repos\\WorkerService\\WorkerService1\\WorkerService1.csproj",
+      "packagesPath": "C:\\Users\\afons\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\afons\\Source\\Repos\\WorkerService\\WorkerService1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\liviu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\afons\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6739,6 +6739,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -6750,6 +6751,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Lextm.SharpSnmpLib": {
             "target": "Package",
@@ -6799,7 +6801,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

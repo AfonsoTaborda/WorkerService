@@ -32,10 +32,23 @@ namespace WorkerService1.Work
                 result.Temperature = GetTemperature(url);
                 result.DoorOpen = GetDoorOpen(url);
                 result.Dust = GetDust(url);
-                result.DateTime = DateTime.Now;
+                result.ReceivedDateTime = DateTime.Now;
+                result.SentDateTime = GetSentDateTime(url);
                 result.Humidity = GetHumidity(url);
                 result.Power = GetPower(url);
             }
+            return result;
+        }
+
+        // TODO: Change OID to newly created one from the Arduino code
+        public DateTime GetSentDateTime(string url)
+        {
+            var response = Messenger.Get(VersionCode.V1,
+                           new IPEndPoint(IPAddress.Parse(url), 161),
+                           new OctetString("public"),
+                           new List<Variable> { new Variable(new ObjectIdentifier("1.3.6.1.2.1.1.8.0")) },
+                           3000)[0].Data?.ToString();
+            var result = !String.IsNullOrEmpty(response) ? DateTime.Parse(response) : new DateTime(2020, 1, 1);
             return result;
         }
 

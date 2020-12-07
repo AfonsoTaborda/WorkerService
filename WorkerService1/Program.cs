@@ -17,7 +17,7 @@ namespace WorkerService1
                 .ConfigureServices((hostContext, services) =>
                 {
                     var optionsBuilder = new DbContextOptionsBuilder<DataAccessContext>();
-                    optionsBuilder.UseSqlServer("Server=.; Database=MicrocontrollerDataDB; integrated security=true");//,
+                    optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS; Database=MicrocontrollerDataDB; integrated security=true");//,
                     services.AddScoped<DataAccessContext>(s => new DataAccessContext(optionsBuilder.Options));
                     services.AddHostedService<Worker>();
                 });

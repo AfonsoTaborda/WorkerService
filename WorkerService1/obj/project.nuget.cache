@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7j7wlEABnwMcWe6tN60K4C8922Jy9X0DxHNHlhdwSl2AVD6rUqIpzfb+Qj7p7sITAsBMpDmbeFolgki00+D8WA==",
+  "dgSpecHash": "2SFYadZ2SIAAGMDoJFDNU8Nuf9cjfnYTaq/BWXHvbU9kobcaNq+ZP6rV2l00BjymIR60vF4FDcPB+v84UfGZOg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\afons\\Source\\Repos\\WorkerService\\WorkerService1\\WorkerService1.csproj",
+  "projectFilePath": "C:\\Users\\afons\\source\\repos\\WorkerService\\WorkerService1\\WorkerService1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\afons\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\afons\\.nuget\\packages\\lextm.sharpsnmplib\\12.2.0\\lextm.sharpsnmplib.12.2.0.nupkg.sha512",

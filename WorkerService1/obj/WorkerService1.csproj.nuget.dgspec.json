@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\afons\\Source\\Repos\\WorkerService\\WorkerService1\\WorkerService1.csproj": {}
+    "C:\\Users\\afons\\source\\repos\\WorkerService\\WorkerService1\\WorkerService1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\afons\\Source\\Repos\\WorkerService\\WorkerService1\\WorkerService1.csproj": {
+    "C:\\Users\\afons\\source\\repos\\WorkerService\\WorkerService1\\WorkerService1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\afons\\Source\\Repos\\WorkerService\\WorkerService1\\WorkerService1.csproj",
+        "projectUniqueName": "C:\\Users\\afons\\source\\repos\\WorkerService\\WorkerService1\\WorkerService1.csproj",
         "projectName": "WorkerService1",
-        "projectPath": "C:\\Users\\afons\\Source\\Repos\\WorkerService\\WorkerService1\\WorkerService1.csproj",
+        "projectPath": "C:\\Users\\afons\\source\\repos\\WorkerService\\WorkerService1\\WorkerService1.csproj",
         "packagesPath": "C:\\Users\\afons\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\afons\\Source\\Repos\\WorkerService\\WorkerService1\\obj\\",
+        "outputPath": "C:\\Users\\afons\\source\\repos\\WorkerService\\WorkerService1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\afons\\AppData\\Roaming\\NuGet\\NuGet.Config",

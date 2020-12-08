@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WorkerService1.Migrations
 {
-    public partial class ThirdMigration : Migration
+    public partial class FourthMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,8 +13,7 @@ namespace WorkerService1.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    SentDateTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ReceivedDateTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DateTime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     MicrocontrollerID = table.Column<int>(type: "int", nullable: false),
                     Temperature = table.Column<float>(type: "real", nullable: false),
                     Humidity = table.Column<float>(type: "real", nullable: false),

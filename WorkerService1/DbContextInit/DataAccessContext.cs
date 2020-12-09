@@ -10,6 +10,6 @@ namespace WorkerService1.DbContextInit
            : base(options)
         {
         }
-        public DbSet<ValuesModel> ValuesModels { get; set; }
+        public DbSet<ValuesModel> Values { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2SFYadZ2SIAAGMDoJFDNU8Nuf9cjfnYTaq/BWXHvbU9kobcaNq+ZP6rV2l00BjymIR60vF4FDcPB+v84UfGZOg==",
+  "dgSpecHash": "2Gv2vEOOUw7KoYx65GmDOGVRUtQT4R0tzN4ns4c1UAJAstnTt4gIJNsbA6hhf/wWxFzrd0dCdlqK88udyO30Ig==",
   "success": true,
   "projectFilePath": "C:\\Users\\afons\\source\\repos\\WorkerService\\WorkerService1\\WorkerService1.csproj",
   "expectedPackageFiles": [
@@ -56,6 +56,7 @@
     "C:\\Users\\afons\\.nuget\\packages\\microsoft.identitymodel.tokens\\5.6.0\\microsoft.identitymodel.tokens.5.6.0.nupkg.sha512",
     "C:\\Users\\afons\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\afons\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
+    "C:\\Users\\afons\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512",
     "C:\\Users\\afons\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\afons\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\afons\\.nuget\\packages\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",

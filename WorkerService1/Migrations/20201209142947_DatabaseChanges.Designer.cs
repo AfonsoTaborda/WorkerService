@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WorkerService1.DbContextInit;
 
 namespace WorkerService1.Migrations
 {
     [DbContext(typeof(DataAccessContext))]
-    partial class DataAccessContextModelSnapshot : ModelSnapshot
+    [Migration("20201209142947_DatabaseChanges")]
+    partial class DatabaseChanges
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,11 +23,6 @@ namespace WorkerService1.Migrations
 
             modelBuilder.Entity("WorkerService1.Models.ValuesModel", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
                     b.Property<DateTime>("DateTime")
                         .HasColumnType("datetime2");
 
@@ -38,6 +35,11 @@ namespace WorkerService1.Migrations
                     b.Property<float>("Humidity")
                         .HasColumnType("real");
 
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
                     b.Property<int>("MicrocontrollerID")
                         .HasColumnType("int");
 
@@ -47,7 +49,7 @@ namespace WorkerService1.Migrations
                     b.Property<float>("Temperature")
                         .HasColumnType("real");
 
-                    b.HasKey("Id");
+                    b.HasKey("DateTime");
 
                     b.ToTable("Values");
                 });

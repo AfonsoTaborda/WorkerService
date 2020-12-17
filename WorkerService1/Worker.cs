@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -38,9 +39,24 @@ namespace WorkerService1
                         var microcontrolers = _dbContext.MicrocontrollerModels.ToList();
                         foreach (var item in microcontrolers)
                         {
-                            var result = retrieveAndPopulate.UpdateDatabase(item);
+                            //var result = retrieveAndPopulate.UpdateDatabase(item);
 
-                            _dbContext.ValuesModels.Add(result);
+                            var result = new ValuesModel();
+                            result.DateTime = new DateTime(2020, 1, 1);
+                            result.MicrocontrollerID = 1;
+                            result.Temperature = 1;
+                            result.Humidity = 1;
+                            result.Power = 1;
+                            result.DoorOpen = false;
+                            result.Dust = 0;
+
+                            _dbContext.Database.ExecuteSqlRaw("SET IDENTITY_INSERT [dbo].[Values] ON");
+
+                            _dbContext.Values.Add(result);
+                            _dbContext.SaveChanges();
+
+                            _dbContext.Database.ExecuteSqlRaw("SET IDENTITY_INSERT [dbo].[Values] OFF");
+
                             _logger.LogInformation("Result Added: {result}", result?.ToString());
                         }
                         await _dbContext.SaveChangesAsync();

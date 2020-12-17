@@ -4,28 +4,18 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using WorkerService1.DbContextInit;
 using WorkerService1.Models;
 
 namespace WorkerService1.Work
 {
     public class RetrieveAndPopulateDatabase
     {
-        private readonly DataAccessContext _context;
-
-        //public RetrieveAndPopulateDatabase(DataAccessContext context)
-        //{
-        //    _context = context;
-        //}
-
-        public ValuesModel UpdateDatabase(KeyValuePair<int, string> item)
+        public ValuesModel UpdateDatabase(MicrocontrollerModel item)
         {
             var result = new ValuesModel();
 
-            string url = item.Value;
-            int id = item.Key;
+            string url = item.IPAddress;
+            int id = item.Id;
             if (!String.IsNullOrEmpty(url))
             {
                 result.MicrocontrollerID = id;

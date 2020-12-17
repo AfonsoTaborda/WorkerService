@@ -35,14 +35,15 @@ namespace WorkerService1
                     {
                         var _dbContext = services.GetRequiredService<DataAccessContext>();
                         var retrieveAndPopulate = new RetrieveAndPopulateDatabase();
-                        foreach (var item in MicrocontrollerMap.IpMapId)
+                        var microcontrolers = _dbContext.MicrocontrollerModels.ToList();
+                        foreach (var item in microcontrolers)
                         {
                             var result = retrieveAndPopulate.UpdateDatabase(item);
 
                             _dbContext.ValuesModels.Add(result);
                             _logger.LogInformation("Result Added: {result}", result?.ToString());
                         }
-                        _dbContext.SaveChanges();
+                        await _dbContext.SaveChangesAsync();
                     }
                     catch (Exception ex)
                     {

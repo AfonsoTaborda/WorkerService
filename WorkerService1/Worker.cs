@@ -52,7 +52,7 @@ namespace WorkerService1
 
                             _dbContext.Database.ExecuteSqlRaw("SET IDENTITY_INSERT [dbo].[Values] ON");
 
-                            _dbContext.Values.Add(result);
+                            _dbContext.ValuesModels.Add(result);
                             _dbContext.SaveChanges();
 
                             _dbContext.Database.ExecuteSqlRaw("SET IDENTITY_INSERT [dbo].[Values] OFF");

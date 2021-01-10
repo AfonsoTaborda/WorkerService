@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\afons\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\afons\\.nuget\\packages"
+      "C:\\Users\\liviu\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\liviu\\.nuget\\packages"
     ]
   }
 }

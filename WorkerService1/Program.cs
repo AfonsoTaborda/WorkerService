@@ -17,7 +17,7 @@ namespace WorkerService1
                 .ConfigureServices((hostContext, services) =>
                 {
                     var optionsBuilder = new DbContextOptionsBuilder<DataAccessContext>();
-                    optionsBuilder.UseSqlServer("Server=192.168.1.89,1433; Database=MicrocontrollerDataDB; User=sa; Password=MSSQLPassword2020");
+                    optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=MicrocontrollerFinalDatabase;Integrated Security=True");
                     services.AddScoped<DataAccessContext>(s => new DataAccessContext(optionsBuilder.Options));
                     services.AddHostedService<Worker>();
                 });

@@ -10,8 +10,8 @@ using WorkerService1.DbContextInit;
 namespace WorkerService1.Migrations
 {
     [DbContext(typeof(DataAccessContext))]
-    [Migration("20210109212415_DBInitNEW")]
-    partial class DBInitNEW
+    [Migration("20210110114941_First")]
+    partial class First
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

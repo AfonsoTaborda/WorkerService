@@ -1,0 +1,24 @@
+{
+    "profiles": {
+      "WorkerService1": {
+        "commandName": "Project",
+        "environmentVariables": {
+          "DOTNET_ENVIRONMENT": "Development"
+        }
+      },
+      "Docker": {
+        "commandName": "Docker"
+      }
+    },
+    "configurations": [
+    {
+        "name": "Docker .NET Core Attach (Preview)",
+        "type": "docker",
+        "request": "attach",
+        "platform": "netCore",
+        "sourceFileMap": {
+            "/src": "${workspaceFolder}"
+        }
+    }
+    ]
+}

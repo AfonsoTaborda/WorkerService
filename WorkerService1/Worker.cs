@@ -31,26 +31,31 @@ namespace WorkerService1
             {
                 using (var scope = _serviceScopeFactory.CreateScope())
                 {
-                    var services = scope.ServiceProvider;
-                    try
-                    {
-                        var _dbContext = services.GetRequiredService<DataAccessContext>();
+                    var _dbContext = services.GetRequiredService<DataAccessContext>();
                         var retrieveAndPopulate = new RetrieveAndPopulateDatabase();
-                        var microcontrolers = _dbContext.MicrocontrollerModels.ToList();
-                        foreach (var item in microcontrolers)
+                        foreach (var item in MicrocontrollerMap.IpMapId)
                         {
-                            var result = retrieveAndPopulate.UpdateDatabase(item);
+                            //var result = retrieveAndPopulate.UpdateDatabase(item);
 
-                            _dbContext.Database.ExecuteSqlRaw("SET IDENTITY_INSERT [dbo].[ValuesModels] ON");
+                            var result = new ValuesModel();
+                            result.DateTime = new DateTime(2020, 1, 1);
+                            result.MicrocontrollerID = 1;
+                            result.Temperature = 1;
+                            result.Humidity = 1;
+                            result.Power = 1;
+                            result.DoorOpen = false;
+                            result.Dust = 0;
 
-                            _dbContext.ValuesModels.Add(result);
+                            _dbContext.Database.ExecuteSqlRaw("SET IDENTITY_INSERT [dbo].[Values] ON");
+
+                            _dbContext.Values.Add(result);
                             _dbContext.SaveChanges();
 
-                            _dbContext.Database.ExecuteSqlRaw("SET IDENTITY_INSERT [dbo].[ValuesModels] OFF");
+                            _dbContext.Database.ExecuteSqlRaw("SET IDENTITY_INSERT [dbo].[Values] OFF");
 
                             _logger.LogInformation("Result Added: {result}", result?.ToString());
                         }
-                        await _dbContext.SaveChangesAsync();
+                        _dbContext.SaveChanges();
                     }
                     catch (Exception ex)
                     {
